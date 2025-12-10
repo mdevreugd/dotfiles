@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Brewfile hash: {{ include "dot_Brewfile.tmpl" | sha256sum }}
+
+
+# Set up Homebrew PATH
+if [[ -f /opt/homebrew/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ -f /usr/local/bin/brew ]]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+fi
+
+if command -v brew &> /dev/null; then
+    echo "Installing/updating packages from Brewfile..."
+    brew bundle --global
+    brew upgrade
+    brew cleanup
+else
+    echo "Homebrew not found"
+fi

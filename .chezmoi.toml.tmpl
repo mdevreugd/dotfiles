@@ -1,0 +1,8 @@
+{{- $personal := false -}}
+{{- $response := promptStringOnce . "personal" "Is this a personal machine (yes/no)" -}}
+{{- if hasPrefix "y" (lower $response) -}}
+{{-   $personal = true -}}
+{{- end }}
+
+[data]
+personal = {{ $personal }}
