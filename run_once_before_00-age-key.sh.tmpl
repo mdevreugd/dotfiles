@@ -1,0 +1,17 @@
+#!/bin/bash
+
+KEY_FILE="$HOME/.config/chezmoi/key.txt"
+
+if [[ ! -f "$KEY_FILE" ]]; then
+    echo "Creating age key file from 1Password..."
+    mkdir -p "$HOME/.config/chezmoi"
+    cat > "$KEY_FILE" << 'EOF'
+# created: 2025-12-11
+# public key: age1h6mv0d9tg9anckr7qddtux7f6hrf6x308ex40xsq04u6tyeq632qva2ftu
+{{ onepasswordRead "op://Private/chezmoi age key/key" }}
+EOF
+    chmod 600 "$KEY_FILE"
+    echo "Age key file created"
+else
+    echo "Age key file already exists"
+fi
