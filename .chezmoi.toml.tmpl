@@ -7,6 +7,8 @@
 {{-   $vault = promptStringOnce . "vault" "1Password vault name for work" -}}
 {{- end }}
 
+encryption = "age"
+
 [data]
 personal = {{ $personal }}
 vault = {{ $vault | quote }}
