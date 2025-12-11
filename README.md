@@ -7,7 +7,7 @@ Before setting up a new device, ensure the following items exist in 1Password:
 ### Git Config (per vault)
 Create a "Git Config" item (Secure Note or Login) in each vault you'll use:
 - **Private** vault (personal devices)
-- **Work** vault (work devices, e.g., FedEx)
+- **Work** vault (work devices)
 
 Fields required:
 - `name` - Git user name
@@ -21,7 +21,7 @@ To find your hostname:
 hostname -s
 ```
 
-Example: `SSH Key - Metins-MBP` in the Private vault.
+Example: If your hostname is `My-MacBook`, create `SSH Key - My-MacBook` in the Private vault.
 
 ## Fresh machine setup
 
