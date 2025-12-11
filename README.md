@@ -23,6 +23,14 @@ hostname -s
 
 Example: If your hostname is `My-MacBook`, create `SSH Key - My-MacBook` in the Private vault.
 
+### chezmoi age key (for encryption)
+Create a "chezmoi age key" item in the **Private** vault with:
+- `key` - the age secret key (starts with `AGE-SECRET-KEY-...`)
+
+### rclone-dropbox (personal only)
+Create a "rclone-dropbox" item in the **Private** vault with:
+- `token` - the Dropbox OAuth token (JSON format)
+
 ## Fresh machine setup
 
 1. Sign into Apple ID (System Settings → Apple Account)
@@ -84,13 +92,13 @@ After setup, complete these manual configurations:
 ## What's included
 
 ### Tools
-- bat, gh, git, go, neovim, pyenv, rustup, terraform, tree
+- age, bat, fx, gh, git, go, jq, neovim, pyenv, rclone, rustup, telnet, terraform, tree, yq
 
 ### Apps
-- 1Password, Alfred, Claude Code, Firefox, Chrome, iTerm2, Rectangle Pro, VS Code
+- 1Password, Alfred, Claude Code, Firefox, Chrome, iTerm2, Rectangle Pro, Slack, Teams, VS Code, Zoom
 
 ### Personal-only apps
-- Brave, Microsoft Edge, Opera
+- Arq, Autodesk Fusion, Brave, Discord, Fantastical, Little Snitch, Micro Snitch, Microsoft Edge, Opera, Signal, Telegram, WhatsApp
 
 ### Configurations
 - Git with 1Password SSH signing
@@ -99,3 +107,4 @@ After setup, complete these manual configurations:
 - VS Code settings (symlinked)
 - iTerm2 preferences
 - macOS defaults (dock autohide, key repeat, etc.)
+- rclone with encrypted config (personal only)
