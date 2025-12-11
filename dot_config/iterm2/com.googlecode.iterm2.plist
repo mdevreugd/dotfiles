@@ -16,6 +16,8 @@
 	<integer>2</integer>
 	<key>AIVectorStore</key>
 	<integer>0</integer>
+	<key>AIVendor</key>
+	<integer>2</integer>
 	<key>AiMaxTokens</key>
 	<integer>400000</integer>
 	<key>AiModel</key>
@@ -26,8 +28,14 @@
 	<string>https://api.openai.com/v1/responses</string>
 	<key>Default Bookmark Guid</key>
 	<string>146C1C25-BE01-44DF-A5DB-E337AB31BBE4</string>
+	<key>EnableDivisionView</key>
+	<false/>
+	<key>FocusFollowsMouse</key>
+	<true/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
+	<key>HideScrollbar</key>
+	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>New Bookmarks</key>
@@ -921,6 +929,8 @@
 			<string>Default</string>
 			<key>Disable Window Resizing</key>
 			<true/>
+			<key>Draw Powerline Glyphs</key>
+			<true/>
 			<key>Flashing Bell</key>
 			<false/>
 			<key>Foreground Color</key>
@@ -1025,7 +1035,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 12</string>
+			<string>MesloLGSNFM-Regular 15</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1131,7 +1141,7 @@
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Unlimited Scrollback</key>
-			<false/>
+			<true/>
 			<key>Use Bold Font</key>
 			<true/>
 			<key>Use Bright Bold</key>
@@ -1152,9 +1162,19 @@
 			<string>/Users/mdevreugd</string>
 		</dict>
 	</array>
+	<key>ShowFullScreenTabBar</key>
+	<false/>
+	<key>ShowPaneTitles</key>
+	<false/>
 	<key>SoundForEsc</key>
 	<false/>
+	<key>SplitPaneDimmingAmount</key>
+	<real>0.098902647148058229</real>
+	<key>UseLionStyleFullscreen</key>
+	<false/>
 	<key>VisualIndicatorForEsc</key>
+	<false/>
+	<key>WindowNumber</key>
 	<false/>
 </dict>
 </plist>
