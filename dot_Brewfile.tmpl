@@ -31,12 +31,20 @@ cask "alfred"
 cask "rectangle-pro"
 cask "visual-studio-code"
 
+# Communication
+cask "slack"
+
 # AI
 cask "claude-code"
 
 {{ if .personal }}
-# Personal only
-cask "opera"
+# Personal - Browsers
 cask "brave-browser"
 cask "microsoft-edge"
+cask "opera"
+
+# Personal - Communication
+cask "signal"
+cask "telegram"
+cask "whatsapp"
 {{ end }}
