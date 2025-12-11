@@ -27,7 +27,8 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# Rust
+# Rust (rustup is keg-only, need to add its bin path)
+export PATH="$(brew --prefix rustup)/bin:$PATH"
 [[ -f "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 
 # Aliases
