@@ -1,0 +1,13 @@
+[user]
+    name = {{ onepasswordRead (printf "op://%s/Git Config/name" .vault) }}
+    email = {{ onepasswordRead (printf "op://%s/Git Config/email" .vault) }}
+    signingkey = {{ onepasswordRead (printf "op://%s/SSH Key - %s/public key" .vault .chezmoi.hostname) }}
+
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+
+[commit]
+    gpgsign = true
