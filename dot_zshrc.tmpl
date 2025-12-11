@@ -17,6 +17,12 @@ fi
 # Paths
 export PATH="$PATH:$HOME/bin"
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
 # Aliases
 alias ll="ls -la"
 alias cat="bat"
