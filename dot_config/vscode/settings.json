@@ -1,2 +1,11 @@
 {
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "editor.wordWrap": "on",
+    "editor.fontSize": 15,
+    "editor.fontFamily": "MesloLGS Nerd Front Mono",
+    "files.autoSave": "onFocusChange",
+    "terminal.integrated.fontSize": 15,
+    "debug.console.fontFamily": "MesloLGS Nerd Front Mono",
+    "debug.console.fontSize": 15,
+    "editor.formatOnSave": true
 }
