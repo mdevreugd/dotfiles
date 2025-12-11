@@ -27,19 +27,24 @@ Example: If your hostname is `My-MacBook`, create `SSH Key - My-MacBook` in the 
 
 1. Sign into Apple ID (System Settings → Apple Account)
 
-2. Install and sign into [1Password](https://1password.com/downloads)
+2. Install Xcode Command Line Tools:
+```bash
+xcode-select --install
+```
 
-3. Enable 1Password integrations:
+3. Install and sign into [1Password](https://1password.com/downloads)
+
+4. Enable 1Password integrations:
    - 1Password → Settings → Developer → Enable **SSH Agent**
    - 1Password → Settings → Developer → Enable **Integrate with 1Password CLI**
 
-4. Install chezmoi:
+5. Install chezmoi:
 ```bash
 sh -c "$(curl -fsLS get.chezmoi.io)"
 export PATH="$HOME/.local/bin:$PATH"
 ```
 
-5. Apply dotfiles:
+6. Apply dotfiles:
 ```bash
 chezmoi init --apply mdevreugd/dotfiles
 ```
@@ -49,7 +54,7 @@ During init, you'll be asked:
   - Yes → uses `Private` vault
   - No → prompts for work vault name
 
-6. Initialize Rust toolchain (if not already done):
+7. Initialize Rust toolchain (if not already done):
 ```bash
 rustup default stable
 ```
