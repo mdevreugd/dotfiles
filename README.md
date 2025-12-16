@@ -40,19 +40,31 @@ Create a "rclone-dropbox" item in the **Private** vault with:
 xcode-select --install
 ```
 
-3. Install and sign into [1Password](https://1password.com/downloads)
+3. Install Homebrew:
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
 
-4. Enable 1Password integrations:
+4. Install and sign into [1Password](https://1password.com/downloads)
+
+5. Enable 1Password integrations:
    - 1Password → Settings → Developer → Enable **SSH Agent**
    - 1Password → Settings → Developer → Enable **Integrate with 1Password CLI**
 
-5. Install chezmoi:
+6. Install prerequisites (needed before chezmoi can process templates):
+```bash
+brew install --cask 1password-cli
+brew install age
+```
+
+7. Install chezmoi:
 ```bash
 sh -c "$(curl -fsLS get.chezmoi.io)"
 export PATH="$HOME/.local/bin:$PATH"
 ```
 
-6. Apply dotfiles:
+8. Apply dotfiles:
 ```bash
 chezmoi init --apply mdevreugd/dotfiles
 ```
@@ -62,7 +74,7 @@ During init, you'll be asked:
   - Yes → uses `Private` vault
   - No → prompts for work vault name
 
-7. Initialize Rust toolchain (if not already done):
+9. Initialize Rust toolchain (if not already done):
 ```bash
 rustup default stable
 ```
