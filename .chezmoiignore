@@ -1,3 +1,5 @@
+README.md
+
 {{- if not .personal }}
 .config/rclone
 {{- end }}
