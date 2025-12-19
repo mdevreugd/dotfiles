@@ -1,10 +1,15 @@
 {{- $personal := false -}}
 {{- $vault := "Private" -}}
+{{- $deviceType := "Laptop" -}}
 {{- $response := promptStringOnce . "personal" "Is this a personal machine (yes/no)" -}}
 {{- if hasPrefix "y" (lower $response) -}}
 {{-   $personal = true -}}
 {{- else -}}
 {{-   $vault = promptStringOnce . "vault" "1Password vault name for work" -}}
+{{- end }}
+{{- $deviceResponse := promptStringOnce . "deviceType" "Device type (Laptop/Desktop)" -}}
+{{- if hasPrefix "d" (lower $deviceResponse) -}}
+{{-   $deviceType = "Desktop" -}}
 {{- end }}
 
 encryption = "age"
@@ -12,6 +17,7 @@ encryption = "age"
 [data]
 personal = {{ $personal }}
 vault = {{ $vault | quote }}
+deviceType = {{ $deviceType | quote }}
 
 [age]
 identity = "~/.config/chezmoi/key.txt"

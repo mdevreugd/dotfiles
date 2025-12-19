@@ -13,15 +13,8 @@ Fields required:
 - `name` - Git user name
 - `email` - Git email address
 
-### SSH Key (per device)
-Create an SSH Key item named `SSH Key - <hostname>` in the appropriate vault.
-
-To find your hostname:
-```bash
-hostname -s
-```
-
-Example: If your hostname is `My-MacBook`, create `SSH Key - My-MacBook` in the Private vault.
+### SSH Key
+Create an SSH Key item named `SSH Key - Laptop` or `SSH Key - Desktop` in the appropriate vault (matching your device type).
 
 ### chezmoi age key (for encryption)
 Create a "chezmoi age key" item in the **Private** vault with:
