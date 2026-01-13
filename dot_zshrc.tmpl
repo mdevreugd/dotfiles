@@ -36,6 +36,14 @@ alias ll="ls -la"
 alias cat="bat"
 alias vim="nvim"
 alias vi="nvim"
+alias tt='terraform fmt -check -diff && terraform validate'
+alias tp='terraform plan -lock=false -parallelism=50'
+alias tpo='terraform plan -lock=false -parallelism=50 -out tf.plan'
+alias ta='terraform apply -parallelism=50'
+alias ti='terraform init'
+alias tc='terraform console'
+alias ts='tfsec -s'
+alias tl='tflint --recursive --force'
 
 {{ if .personal }}
 # Personal aliases
